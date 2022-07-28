@@ -5,6 +5,7 @@ phases:
     on-failure: ABORT
     runtime-versions:
       java: corretto11
+
   pre_build:
     on-failure: ABORT
     commands:
@@ -12,6 +13,7 @@ phases:
     - mvn clean
     - mvn validate
     - echo Build ends on 'date'
+
   build:
     on-failure: ABORT
     commands:
@@ -19,16 +21,22 @@ phases:
     - mvn compile
     - mvn test
     - echo Build ends on 'date'
+    
   post_build:
     on-failure: ABORT
     commands:
     - echo Build start on 'date'
     - mvn package
-    - mv target/*.war helloword.war
+    - mv target/*.war helloworld.war
     - echo Build edns on 'date'
 
 artifacts:
   fils:
-    -helloword.war
+    -helloworld.war
   name: hello-word-artifact
 
+reports:
+  repo:
+    files:
+      - target/helloworld.xml
+    file-format: JUNITXML
