@@ -21,7 +21,7 @@ phases:
     - mvn compile
     - mvn test
     - echo Build ends on 'date'
-    
+
   post_build:
     on-failure: ABORT
     commands:
@@ -32,7 +32,7 @@ phases:
 
 artifacts:
   fils:
-    -helloworld.war
+    - helloworld.war
   name: hello-word-artifact
 
 reports:
