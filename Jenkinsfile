@@ -45,16 +45,6 @@ pipeline {
             }
         }
 
-        stage('Quality Scan') {
-            steps {
-                    sh '''
-                        mvn clean verify sonar:sonar \
-                        -Dsonar.projectKey=Build-and-Deploy-a-Java-Maven-Application \
-                        -Dsonar.host.url=http://$SONAR_IP \
-                        -Dsonar.login=$SONAR_TOKEN
-                    '''
-            }
-        }
     
         stage('Package') {
             steps {
