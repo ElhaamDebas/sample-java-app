@@ -27,11 +27,11 @@ phases:
     commands:
     - echo Build start on 'date'
     - mvn package
-    - mv target/*.war helloworld.war
+    - mv target/*.war ROOT.war
     - echo Build edns on 'date'
 
 artifacts:
   files:
-    - helloworld.war
+    - ROOT.war
   name: hello-word-artifact
 
