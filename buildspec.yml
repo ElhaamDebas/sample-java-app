@@ -38,5 +38,5 @@ artifacts:
 reports:
   repo:
     files:
-      - target/helloworld.xml
+      - target/*.xml
     file-format: JUNITXML
