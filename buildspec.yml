@@ -36,4 +36,4 @@ reports:
   repo:
     files:
       - target/*.xml
-    file-format: JUnit XML
+    file-format: JUNITXML
