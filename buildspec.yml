@@ -27,12 +27,16 @@ phases:
     commands:
     - echo Build start on 'date'
     - mvn package
-    - mv ./target/**.war helloworld.war
+    - mv target/*.war helloworld.war
     - echo Build edns on 'date'
 
 artifacts:
-  fils:
+  files:
     - helloworld.war
   name: hello-word-artifact
 
-
+reports:
+  repo:
+    files:
+      - target/*.xml
+    file-format: JUNITXML
