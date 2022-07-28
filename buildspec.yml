@@ -35,5 +35,5 @@ artifacts:
 reports:
   repo:
     files:
-      - target/*.war
+      - target/*.xml
     file-format: JUnit XML
